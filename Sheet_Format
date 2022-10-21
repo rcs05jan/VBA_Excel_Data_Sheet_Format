@@ -1,0 +1,21 @@
+Sub Format()
+    
+    ActiveWindow.DisplayGridlines = False
+    
+    Sheets(1).Name = "Status_Sheet"
+
+    Range("A1:XFD1048576").Select
+    With Selection.Font
+        .Name = "Calibri"
+        .Size = 10
+        .OutlineFont = False
+    Range("A1:XFD1048576").HorizontalAlignment = xlCenter
+    Range("A1:XFD1048576").VerticalAlignment = xlCenter
+    Range("A:A,B:B,C:C,G:G,I:I,J:J,K:K,L:L,M:M,N:N").NumberFormat = "$ #,##0.00"
+    Range("A1:EV1").Font.Bold = True
+    Range("A1:EV1").Interior.Color = RGB(180, 180, 180)
+    Range("A1:XFD1048576").Columns.AutoFit
+
+    End With
+
+End Sub
