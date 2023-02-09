@@ -15,7 +15,7 @@ Sub Format()
     Range("A1:EV1").Font.Bold = True
     Range("A1:EV1").Interior.Color = RGB(180, 180, 180)
     Range("A1:XFD1048576").Columns.AutoFit
-
+    ActiveWorkbook.save
     End With
 
 End Sub
